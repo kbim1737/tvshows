@@ -1,9 +1,10 @@
 .Main-div{
-    background-color: #282c34;
+    /* background-color: #282c34; */
 }
 
 .middleSearch{
     padding-top: 20rem;
+    height: 100vh;
     padding-left: 15rem;
     padding-right: 15rem;
 }
@@ -13,4 +14,10 @@
     padding-left: 15rem;
     padding-right: 15rem;
 }
+
+#row{
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+}
+
 

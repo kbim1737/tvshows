@@ -1,0 +1,51 @@
+
+
+.card-subtitle {
+    margin-top: -.375rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: slategrey;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    color: slategrey;
+}
+
+.container2 {
+    padding: 0rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    border-color: aliceblue;
+}
+
+.card{
+    border: none;
+    margin-top: 1rem;
+    text-align: -webkit-left;
+    height: 10rem
+}
+.card-body{
+    padding-top: 0;
+}
+
+
+.card-title{
+    margin-bottom: .75rem;
+    font-size: 1.5rem;
+}
+
+.card-text:last-child {
+    margin-top: 2rem;
+}
+
+.card-subtitle{
+    margin-top: 0.625rem
+}
+
+.image {
+    float: left;
+    width: 8rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
