@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tvshows/static/css/main.84487dca.chunk.css",
+    "main.js": "/tvshows/static/js/main.96382df8.chunk.js",
+    "main.js.map": "/tvshows/static/js/main.96382df8.chunk.js.map",
+    "runtime-main.js": "/tvshows/static/js/runtime-main.90897355.js",
+    "runtime-main.js.map": "/tvshows/static/js/runtime-main.90897355.js.map",
+    "static/js/2.22159b1d.chunk.js": "/tvshows/static/js/2.22159b1d.chunk.js",
+    "static/js/2.22159b1d.chunk.js.map": "/tvshows/static/js/2.22159b1d.chunk.js.map",
+    "index.html": "/tvshows/index.html",
+    "precache-manifest.f26322bad2a20d0ddb804ffd2fdee914.js": "/tvshows/precache-manifest.f26322bad2a20d0ddb804ffd2fdee914.js",
+    "service-worker.js": "/tvshows/service-worker.js",
+    "static/css/main.84487dca.chunk.css.map": "/tvshows/static/css/main.84487dca.chunk.css.map",
+    "static/js/2.22159b1d.chunk.js.LICENSE.txt": "/tvshows/static/js/2.22159b1d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tvshows/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90897355.js",
+    "static/js/2.22159b1d.chunk.js",
+    "static/css/main.84487dca.chunk.css",
+    "static/js/main.96382df8.chunk.js"
+  ]
+}
