@@ -6,26 +6,40 @@ import { Container } from 'react-bootstrap';
 
 
 
-const TvShowCard = (props) => {
-        
+class TvShowCard extends React.Component {
 
-        console.log(props);
+    constructor(props){
+        super(props);
+        this.handleOnClick = this.handleOnClick.bind(this);
+    }
+
+
+    handleOnClick = () =>{
+        this.props.handleTvShowID(this.props.id);
+    }
+
+    render(){ 
+
         return(
 
-            <Container className="container2">
-                <Image className="image" src={props.url} alt="image"></Image>
+            <Container onClick={this.handleOnClick} className="container2">
+                {this.props.url ? 
+                <Image className="image" src={"https://image.tmdb.org/t/p/original"+this.props.url} alt="image"></Image> :
+                <Image className="noimage" src={require('./static/nope.jpg')} alt="image"></Image> 
+                }
                 <Card>
                     <Card.Body>
-                        <Card.Title>{props.title}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{props.firstDate}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{props.country}</Card.Subtitle>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{this.props.firstDate}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">{this.props.country}</Card.Subtitle>
                         <Card.Text>
-                            {props.overview.slice(0,200)}...
+                            {this.props.overview.slice(0,200)}...
                         </Card.Text>
                     </Card.Body>
                 </Card>
             </Container>
         );
+    }
 }
 
 export default TvShowCard;

@@ -1,0 +1,36 @@
+.image-detailed{
+    float: left;
+    width: 22.67rem;
+    border-top-left-radius: 1rem;
+}
+
+.title{
+    border-bottom: 1px solid;
+}
+
+.container-detailed{
+    padding: 0rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    border-color: aliceblue;
+    height: auto;
+    overflow: auto;
+}
+
+.card-detailed{
+    border: none;
+    margin-top: 1rem;
+    text-align: -webkit-left;
+    height: 34rem;
+    width: 45rem;
+    padding: 2rem 1rem 1rem 1rem ;
+}
+
+
+.overview{
+    font-size: 1rem;
+    margin-top: 0rem;
+}
+
+
+

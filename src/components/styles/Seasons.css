@@ -1,0 +1,38 @@
+.drop{
+    float: left;
+    
+}
+
+.season-button{
+    color: #fff;
+    background-color: #b0b0b0;
+    border: none;
+    width: 6rem;
+}
+
+.season-button:hover{
+    color: #fff;
+    background-color: #474a4c;
+    border-color: #474a4c;
+}
+
+.season-button:active{
+    color: #fff;
+    background-color: #474a4c;
+    border-color: #474a4c;
+}
+
+.season-button:focus{
+    color: #fff;
+    background-color: #474a4c;
+    border-color: #474a4c;
+}
+
+.season-container{
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+}
+
+.season-row{
+    justify-content: center;
+}

@@ -1,7 +1,3 @@
-.Main-div{
-    /* background-color: #282c34; */
-}
-
 .middleSearch{
     padding-top: 20rem;
     height: 100vh;
@@ -13,6 +9,7 @@
     padding-top: 2rem;
     padding-left: 15rem;
     padding-right: 15rem;
+    transition: transform 3s
 }
 
 #row{

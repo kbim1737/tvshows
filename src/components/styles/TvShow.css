@@ -19,6 +19,10 @@
     border-color: aliceblue;
 }
 
+.container2:hover{
+    transform: scale(1.1);
+}
+
 .card{
     border: none;
     margin-top: 1rem;
@@ -49,3 +53,28 @@
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
+
+.noimage{
+    float: left;
+    width: 8rem;
+    height: 11rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.image-episode {
+    float: left;
+    width: 20rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.noimage-episode {
+    float: left;
+    width: 14rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+
+
