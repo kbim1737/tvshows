@@ -21,8 +21,6 @@ class Seasons extends React.Component {
 
 
     handleClick = (number) => {
-        
-        console.log(number);
         const path = "https://api.themoviedb.org/3/tv/" + this.props.tvID + "/season/" + number + "?api_key=a04e46bcb6a28479586d4331d7049f7f"
         fetch(path)
         .then(res => res.json())

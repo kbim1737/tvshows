@@ -41,7 +41,6 @@ class SearchResults extends React.Component {
                     nextEpisodeToAir: response.next_episode_to_air,
                     
           } 
-          console.log(response.genres);
           this.props.handleTvShowDetails({results: result, showID: id}) ;
         },
         (error) => {
