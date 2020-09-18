@@ -5,7 +5,6 @@ import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container';
 import ReactStars from 'react-rating-stars-component';
 import EpisodeModal from './EpisodeModal'
-import './styles/TvShow.css';
 
 class Episode extends React.Component {
 
@@ -30,11 +29,12 @@ class Episode extends React.Component {
                 <Image className="image-episode" src={"https://image.tmdb.org/t/p/original"+this.props.episode.url} alt="image"></Image> :
                 <Image className="noimage-episode" src={require('./static/nope.jpg')} alt="image"></Image> 
                 }
-                <Card style={{ width: '25rem' }}>
+                <Card>
                     <Card.Body>
-                        <Card.Title>{this.props.episode.name}</Card.Title>
+                        <Card.Title className="card-title-episode">{this.props.episode.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{this.props.episode.air_date}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted d-flex">
+                        <Card.Subtitle className="mb-2 text-muted">Episode number: {this.props.episode.episode_number}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted d-flex star">
                                 <div className="stars-text">
                                     Site rating:  
                                 </div>                    
@@ -53,9 +53,8 @@ class Episode extends React.Component {
                 </Card>
                 <EpisodeModal
                  show={this.state.showModal}
-                 handleModal={this.handleOnClick}
+                 onHide={() => this.setState({showModal: false})}
                  episode={this.props.episode}>
-
                  </EpisodeModal>
             </Container>
         );

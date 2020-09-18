@@ -57,7 +57,7 @@ class SearchResults extends React.Component {
                  
                  <Container>
                     {this.props.searchResults.map((item, rowIndex) => (
-                    <Row key={rowIndex} id="row" >
+                    <Row key={rowIndex} className="row" >
                         <TvShowCard 
                             title={item.title}
                             url={item.url} 

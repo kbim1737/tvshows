@@ -37,7 +37,8 @@ class Seasons extends React.Component {
                     overview: response.episodes[i].overview,
                     vote_average: response.episodes[i].vote_average,
                     crew: response.episodes[i].crew,
-                    guest_stars: response.episodes[i].guest_stars
+                    guest_stars: response.episodes[i].guest_stars,
+                    episode_number: response.episodes[i].episode_number,
                 };
                 ret.push(result);
           } 
@@ -58,7 +59,7 @@ class Seasons extends React.Component {
 
             <Container className="season-container">
                 <Row className="season-row">
-                <InputGroup>
+                <InputGroup style={{justifyContent: "center"}}>
                 {this.props.seasons.map((item,i) =>
                     <Button className="mr-2 mb-2 season-button" onClick={() => {this.handleClick(item.season_number)}} key={i}>{item.name}</Button>)}
                  </InputGroup>

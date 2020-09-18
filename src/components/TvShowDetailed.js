@@ -30,9 +30,11 @@ class TvShowDetailed extends React.Component {
                                     else 
                                         return item.name + " | " 
                                 })}</Card.Subtitle>
+                             {this.props.details.firstDate ?    
                             <Card.Subtitle className="mb-2 text-muted">
                                 First air date: {this.props.details.firstDate}
-                            </Card.Subtitle>
+                            </Card.Subtitle> : null
+                            }
                             <Card.Subtitle className="mb-2 text-muted">
                                 Status: {this.props.details.status}
                             </Card.Subtitle>
@@ -47,38 +49,49 @@ class TvShowDetailed extends React.Component {
                                         return item.name + ", " 
                                 })}   
                             </Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                Last episode to air:   {this.props.details.lastEpisodeToAir?.name} | {this.props.details.lastEpisodeToAir?.air_date} 
-                            
-                            </Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                Next episode to air:   {this.props.details.nextEpisodeToAir?.name} | {this.props.details?.nextEpisodeToAir?.air_date} 
-                            </Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                Number of episodes: {this.props.details.numberOfEpisodes}
-                            </Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                Number of seasons: {this.props.details.numberOfSeasons}
-                            </Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                Origin country:  {this.props.details.originCountry.map((item, i) => {
-                                    if(this.props.details.originCountry.length-1 === i)
-                                        return item
-                                    else 
-                                        return item + ", " 
-                                })}   
-                            </Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                Production companies:  {this.props.details.productionCompanies.map((item, i) => {
-                                    if(this.props.details.productionCompanies.length-1 === i)
-                                        return item.name
-                                    else 
-                                        return item.name + ", " 
-                                })}   
-                            </Card.Subtitle>
+                            {this.props.details.lastEpisodeToAir ?
+                                <Card.Subtitle className="mb-2 text-muted">
+                                    Last episode to air:   {this.props.details.lastEpisodeToAir?.name} | {this.props.details.lastEpisodeToAir?.air_date} 
+                                </Card.Subtitle> : null
+                            }
+                            {this.props.details.nextEpisodeToAir ?
+                                <Card.Subtitle className="mb-2 text-muted">
+                                    Next episode to air:   {this.props.details.nextEpisodeToAir?.name} | {this.props.details?.nextEpisodeToAir?.air_date} 
+                                </Card.Subtitle> : null
+                            }
+                            {this.props.details.numberOfEpisode ?
+                                <Card.Subtitle className="mb-2 text-muted">
+                                    Number of episodes: {this.props.details.numberOfEpisodes}
+                                </Card.Subtitle> : null
+                            } 
+                            {this.props.details.numberOfSeasons ?  
+                                <Card.Subtitle className="mb-2 text-muted">
+                                    Number of seasons: {this.props.details.numberOfSeasons}
+                                </Card.Subtitle>: null
+                            }
+                            {this.props.details.originCountry ?
+                                <Card.Subtitle className="mb-2 text-muted">
+                                    Origin country:  {this.props.details.originCountry.map((item, i) => {
+                                        if(this.props.details.originCountry.length-1 === i)
+                                            return item
+                                        else 
+                                            return item + ", " 
+                                    })}   
+                                </Card.Subtitle> : null
+                            }
+                            {this.props.details.productionCompanies ?
+                                <Card.Subtitle className="mb-2 text-muted">
+                                    Production companies:  {this.props.details.productionCompanies.map((item, i) => {
+                                        if(this.props.details.productionCompanies.length-1 === i)
+                                            return item.name
+                                        else 
+                                            return item.name + ", " 
+                                    })}   
+                                </Card.Subtitle> : null
+                            }
                             <Card.Subtitle className="mb-2 text-muted d-flex">
                                 <div className="stars-text">
-                                    Site rating:  
+                                    Site rating: ({this.props.details.voteAverage})
                                 </div>                    
                                 <ReactStars
                                     count={10}
@@ -93,11 +106,14 @@ class TvShowDetailed extends React.Component {
                             </Card.Subtitle>
 
 
-                            
-                            <Card.Subtitle className="mb-2 text-muted">Overview:</Card.Subtitle>
-                            <Card.Text className="overview">
-                            {this.props.details.overview}
-                            </Card.Text>
+                            {this.props.details.overview ?
+                                <div>
+                                    <Card.Subtitle className="mb-2 text-muted">Overview:</Card.Subtitle>
+                                    <Card.Text className="overview">
+                                    {this.props.details.overview}
+                                    </Card.Text>
+                                </div> : null
+                            }
                         </Card.Body>
                     </Card>
                     

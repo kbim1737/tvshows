@@ -29,7 +29,7 @@ class TvShowCard extends React.Component {
                 }
                 <Card>
                     <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Title className="card-title-show">{this.props.title}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{this.props.firstDate}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted">{this.props.country}</Card.Subtitle>
                         <Card.Text>

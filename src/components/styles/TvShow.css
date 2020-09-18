@@ -17,7 +17,8 @@
     border-radius: 1rem;
     background-color: #fff;
     border-color: aliceblue;
-    transition: transform .2s
+    transition: transform .2s;
+    cursor: pointer;
 }
 
 .container2:hover{
@@ -40,9 +41,11 @@
     font-size: 1.5rem;
 }
 
-.card-text:last-child {
-    margin-top: 2rem;
+.card-title-show{
+    width: 57rem;
+    border-bottom: 1px solid;
 }
+
 
 .card-subtitle{
     margin-top: 0.625rem
@@ -78,4 +81,20 @@
 }
 
 
+@media only screen and (max-width:576px) {
 
+    .card-title-show {
+        width: 11rem;
+        border-bottom: 1px solid
+    }
+
+    .container2 {
+        height: 20rem;
+    }
+
+    .image{
+        width: 9rem;
+        height: 20rem;
+    }
+
+}

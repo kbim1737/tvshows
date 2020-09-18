@@ -3,3 +3,44 @@
     margin-top: -1rem;
     margin-bottom: 0rem;
 }
+
+.image-episode {
+    float: left;
+    width: 20rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.noimage-episode {
+    float: left;
+    width: 14rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.card-title-episode{
+    border-bottom: 1px solid;
+    width: 46rem
+}
+
+
+
+@media only screen and (max-width:576px) {
+
+    .card-title-episode {
+        width: 11rem;
+        border-bottom: 1px solid
+    }
+
+    .container2 {
+        height: 20rem;
+    }
+
+    .image-episode{
+        width: 9rem;
+        height: 20rem;
+    }
+    .star{
+        margin-top: 0rem;
+    }
+}

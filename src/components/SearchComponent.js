@@ -44,7 +44,6 @@ class SearchComponent extends React.Component {
             .then((response) => {
                 let i=0;
                 let ret = [];
-                console.log(response);
                     for(i=0;i<response.results.length;i++){
                         let result={
                             title: response.results[i].original_name,

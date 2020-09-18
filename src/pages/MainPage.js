@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import SearchComponent from '../components/SearchComponent';
 import SearchResults from '../components/SearchResults';
 import TvShowDetailed from '../components/TvShowDetailed'
 import Seasons from '../components/Seasons';
+import Alert from 'react-bootstrap/Alert'
 
 class MainPage extends React.Component {
     
@@ -23,7 +24,7 @@ class MainPage extends React.Component {
 
 
     handleWasSearched = (search) => {
-        this.setState({wasSearched: search.wasSearched, results: search.results, wasDetailed: false, noInput: false});
+        this.setState({wasSearched: search.wasSearched, results: search.results, wasDetailed: false, noInput:false});
     }
 
     handleTvShowDetails = (detailed) => {
@@ -32,7 +33,7 @@ class MainPage extends React.Component {
     }
 
     handleNoInput = () =>{
-        this.setState({noInput: !this.state.noInput, wasSearched: true})
+        this.setState({noInput: true, wasSearched: true})
     }
     
     render() {
@@ -42,10 +43,14 @@ class MainPage extends React.Component {
         
         if(this.state.wasDetailed === true){
             searchResult = null;
-        } else if(this.state.noInput){
-            searchResult = <div>Please insert an input</div>
+        } else if(this.state.noInput){ 
+            searchResult =   <Alert variant="danger">
+                                Please insert an input!
+                            </Alert>;
         } else if(this.state.results.length === 0 && this.state.wasSearched === true){
-            searchResult = <div>Sorry we didn't found anything for this input</div>
+            searchResult = <Alert variant="info">
+                                Sorry we didn't found anything for this input
+                            </Alert>;
         }
         else{
             searchResult = <SearchResults handleTvShowDetails={this.handleTvShowDetails} searchResults={this.state.results}/>;

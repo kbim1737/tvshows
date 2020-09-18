@@ -1,6 +1,6 @@
 .image-detailed{
     float: left;
-    width: 22.67rem;
+    width: 24.37rem;
     border-top-left-radius: 1rem;
 }
 
@@ -14,7 +14,7 @@
     background-color: #fff;
     border-color: aliceblue;
     height: auto;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .card-detailed{
@@ -28,9 +28,23 @@
 
 
 .overview{
-    font-size: 1rem;
-    margin-top: 0rem;
+    font-size: 1.6vh;
+    margin-top: 0rem !important;
 }
 
+@media only screen and (max-width:576px) {
+
+    .card-detailed {
+        width: 22rem;
+        height: 50rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .image-detailed {
+        width: 21.6rem;
+        border-top-right-radius: 1rem;
+    }
+
+}
 
 

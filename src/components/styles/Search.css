@@ -9,7 +9,6 @@
     padding-top: 2rem;
     padding-left: 15rem;
     padding-right: 15rem;
-    transition: transform 3s
 }
 
 #row{
@@ -18,3 +17,18 @@
 }
 
 
+@media only screen and (max-width:576px) {
+
+    .middleSearch{
+        padding-top: 20rem;
+        height: auto;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    
+    .topSearch{
+        padding-top: 2rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
