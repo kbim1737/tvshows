@@ -17,6 +17,7 @@
     border-radius: 1rem;
     background-color: #fff;
     border-color: aliceblue;
+    transition: transform .2s
 }
 
 .container2:hover{
