@@ -49,4 +49,7 @@ opacity: 0.8;
         width: 22.5rem;
     }
 
+    .modal {
+        left: 0rem;
+    }  
 }

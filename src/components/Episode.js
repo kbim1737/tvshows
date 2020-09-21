@@ -11,9 +11,12 @@ class Episode extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            showModal: false
+            showModal: false,
+            details: '',
         }
         this.handleOnClick = this.handleOnClick.bind(this);
+        this.onMouseOut = this.onMouseOut.bind(this);
+        this.onMouseOver = this.onMouseOver.bind(this);
     }
 
 
@@ -21,10 +24,23 @@ class Episode extends React.Component {
         this.setState({showModal: !this.state.showModal})
     }
 
+    
+    onMouseOver = () => {
+        this.setState({details: 'More details'})
+    }
+
+    onMouseOut () {
+        this.setState({details : ''})
+    }
+
     render(){ 
 
         return(
-            <Container onClick={this.handleOnClick} className="container2">
+            <Container
+            onClick={this.handleOnClick} 
+            onMouseEnter={this.onMouseOver}
+            onMouseLeave={this.onMouseOut} 
+            className="container2">
                 {this.props.episode.url ? 
                 <Image className="image-episode" src={"https://image.tmdb.org/t/p/original"+this.props.episode.url} alt="image"></Image> :
                 <Image className="noimage-episode" src={require('./static/nope.jpg')} alt="image"></Image> 
@@ -36,7 +52,7 @@ class Episode extends React.Component {
                         <Card.Subtitle className="mb-2 text-muted">Episode number: {this.props.episode.episode_number}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted d-flex star">
                                 <div className="stars-text">
-                                    Site rating:  
+                                    Site rating: ({this.props.episode.vote_average})  
                                 </div>                    
                                 <ReactStars
                                     count={10}
@@ -49,6 +65,8 @@ class Episode extends React.Component {
                                     size={24}
                                     />
                             </Card.Subtitle>
+                            <Card.Link onClick={this.handleOnClick} className="mb-2 text-muted details">{this.state.details}</Card.Link>
+                            <Card.Link onClick={this.handleOnClick} className="mb-2 text-muted details-small">More details</Card.Link>
                     </Card.Body>
                 </Card>
                 <EpisodeModal

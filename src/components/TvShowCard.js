@@ -10,6 +10,9 @@ class TvShowCard extends React.Component {
 
     constructor(props){
         super(props);
+        this.state= {
+            details: ''
+        }
         this.handleOnClick = this.handleOnClick.bind(this);
     }
 
@@ -18,11 +21,13 @@ class TvShowCard extends React.Component {
         this.props.handleTvShowID(this.props.id);
     }
 
+
     render(){ 
 
         return(
 
-            <Container onClick={this.handleOnClick} className="container2">
+            <Container onClick={this.handleOnClick} 
+                className="container2">
                 {this.props.url ? 
                 <Image className="image" src={"https://image.tmdb.org/t/p/original"+this.props.url} alt="image"></Image> :
                 <Image className="noimage" src={require('./static/nope.jpg')} alt="image"></Image> 

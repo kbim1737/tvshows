@@ -11,6 +11,19 @@
     border-bottom-left-radius: 1rem;
 }
 
+.container3{
+    padding: 0rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    border-color: aliceblue;
+    transition: transform .2s;
+}
+
+.container3:hover{
+    transform: scale(1.1);
+  }
+  
+
 .noimage-episode {
     float: left;
     width: 14rem;
@@ -23,7 +36,13 @@
     width: 46rem
 }
 
+.details{
+    border-bottom: 1px solid;
+}
 
+.details-small{
+    display: none;
+}
 
 @media only screen and (max-width:576px) {
 
@@ -43,4 +62,19 @@
     .star{
         margin-top: 0rem;
     }
+
+    .details-small{
+        display: block;
+        border-bottom: 1px solid;
+    }
+
+    .details{
+        display: none
+    }
+    
+    .card-link+.card-link {
+        text-align: center;
+        padding-top: 2rem
+    }
+
 }
