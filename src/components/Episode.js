@@ -9,7 +9,7 @@ import EpisodeModal from './EpisodeModal'
 class Episode extends React.Component {
 
     constructor(props){
-        super(props);
+        super();
         this.state={
             showModal: false,
             details: '',

@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './styles/TvShowDetailed.css';
 import Image from 'react-bootstrap/Image'
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import ReactStars from 'react-rating-stars-component';
 
 

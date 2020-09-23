@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/TvShow.css';
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import TvShowCard from '../components/TvShowCard';
 
@@ -10,7 +10,7 @@ class SearchResults extends React.Component {
 
     
     constructor(props){
-        super(props);
+        super();
         this.handleTvShowID = this.handleTvShowID.bind(this);
     }
 

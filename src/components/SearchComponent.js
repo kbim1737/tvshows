@@ -12,7 +12,7 @@ import './styles/Search.css'
 class SearchComponent extends React.Component {
     
     constructor(props){
-        super(props);
+        super();
         this.state = {
             wasSearched : false,
             inputValue: '',
@@ -60,16 +60,12 @@ class SearchComponent extends React.Component {
             (error) => {
                 console.log(error);
             }
-
-        ); 
-
-        
+        );    
             this.setState({wasSearched: true});
-    } else {
-        this.setState({wasSearched: true});
-        this.props.handleNoInput();
-
-    }
+        } else {
+            this.setState({wasSearched: true});
+            this.props.handleNoInput();
+        }
            
     }
 

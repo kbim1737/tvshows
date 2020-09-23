@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Seasons.css';
-import { Container, InputGroup } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Episode from './Episode';
 import Button from 'react-bootstrap/Button'

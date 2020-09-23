@@ -2,14 +2,14 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './styles/TvShow.css';
 import Image from 'react-bootstrap/Image'
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 
 
 
 class TvShowCard extends React.Component {
 
     constructor(props){
-        super(props);
+        super();
         this.state= {
             details: ''
         }
