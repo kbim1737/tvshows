@@ -50,7 +50,7 @@ opacity: 0.8;
     }
 
     .modal {
-        left: 0rem;
+        padding-left: 0rem;
     }  
     .modal-open .modal {
         overflow-x: hidden;
