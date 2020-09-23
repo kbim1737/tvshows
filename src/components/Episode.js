@@ -45,7 +45,7 @@ class Episode extends React.Component {
                 <Image className="image-episode" src={"https://image.tmdb.org/t/p/original"+this.props.episode.url} alt="image"></Image> :
                 <Image className="noimage-episode" src={require('./static/nope.jpg')} alt="image"></Image> 
                 }
-                <Card>
+                <Card className="card-body-episode">
                     <Card.Body>
                         <Card.Title className="card-title-episode">{this.props.episode.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{this.props.episode.air_date}</Card.Subtitle>

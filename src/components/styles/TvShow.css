@@ -15,7 +15,8 @@
     border: none;
     margin-top: 1rem;
     text-align: -webkit-left;
-    height: 10rem
+    height: 10rem;;
+    width: 26rem;
 }
 .card-body{
     padding-top: 0;
@@ -63,12 +64,16 @@
     }
 
     .container2 {
-        height: 20rem;
+        height: 21rem;
     }
 
     .image{
         width: 9rem;
-        height: 20rem;
+        height: 21rem;
+    }
+
+    .card {
+        width: 11rem;
     }
 
 }

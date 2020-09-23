@@ -17,7 +17,12 @@
     background-color: #fff;
     border-color: aliceblue;
     transition: transform .2s;
+    width: 25rem;
 }
+
+/* .card-body-episode{
+    width: 27rem;
+} */
 
 .container3:hover{
     transform: scale(1.1);
@@ -52,29 +57,58 @@
     }
 
     .container2 {
-        height: 20rem;
+        height: 21rem;
     }
 
     .image-episode{
         width: 9rem;
-        height: 20rem;
+        height: 21rem;
     }
     .star{
         margin-top: 0rem;
     }
 
-    .details-small{
-        display: block;
-        border-bottom: 1px solid;
-    }
+    /* .card-body-episode {
+        width: 13rem;
+    } */
 
-    .details{
-        display: none
-    }
-    
+   
     .card-link+.card-link {
         text-align: center;
         padding-top: 2rem
     }
 
+    .details-small{
+        display: block;
+        border-bottom: 1px solid;
+        padding-left: 0rem;
+    }
+
+}
+
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+
+    .card-title-episode {
+        width: 9rem;
+        border-bottom: 1px solid
+    }
+
+    .details{
+        display: none
+    }
+
+    .details-small{
+        display: block;
+        border-bottom: 1px solid;
+        padding-left: 0rem;
+    }
+
+    .image-episode{
+        height: 15.1rem;
+    }
+
+    .card-link+.card-link {
+        margin-left: 0.95rem;
+        margin-right: 1.6rem;
+    }
 }

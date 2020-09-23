@@ -35,7 +35,7 @@ opacity: 0.8;
 .modal-content {
     background-color: #000000;
     width: 48rem;
-    height: 51rem;
+    height: 58rem;
     border-radius: 1rem
 }
 
@@ -52,4 +52,9 @@ opacity: 0.8;
     .modal {
         left: 0rem;
     }  
+    .modal-open .modal {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-left: 0px;
+    }
 }

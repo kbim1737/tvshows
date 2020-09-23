@@ -29,3 +29,19 @@
         padding-right: 0rem;
     }
 }
+
+
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+    .topSearch {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .middleSearch{
+        padding-top: 20rem;
+        height: 100vh;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
