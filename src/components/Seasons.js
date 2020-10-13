@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles/Seasons.css';
 import Container from 'react-bootstrap/Container';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -7,22 +7,14 @@ import Episode from './Episode';
 import Button from 'react-bootstrap/Button'
 
 
-class Seasons extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            seasonNumber: this.props.seasons[0]?.number,
-            episodes: []
-        }
-        this.handleClick = this.handleClick.bind(this);
-    
-    }
+const Seasons = props => {
 
 
+    const [episodes, setEpisodes] = useState([]);
 
-    handleClick = (number) => {
-        const path = "https://api.themoviedb.org/3/tv/" + this.props.tvID + "/season/" + number + "?api_key=a04e46bcb6a28479586d4331d7049f7f"
+
+    const handleClick = (number) => {
+        const path = "https://api.themoviedb.org/3/tv/" + props.tvID + "/season/" + number + "?api_key=a04e46bcb6a28479586d4331d7049f7f"
         fetch(path)
         .then(res => res.json())
         .then((response) => {
@@ -41,7 +33,7 @@ class Seasons extends React.Component {
                 };
                 ret.push(result);
           } 
-            this.setState({episodes: ret});
+            setEpisodes(ret);
         },
         (error) => {
             console.log(error);
@@ -50,28 +42,24 @@ class Seasons extends React.Component {
 
     
 
+    return(
 
-    render(){ 
-
-
-        return(
-
-            <Container className="season-container">
-                <Row className="season-row">
-                <InputGroup style={{justifyContent: "center"}}>
-                {this.props.seasons.map((item,i) =>
-                    <Button className="mr-2 mb-2 season-button" onClick={() => {this.handleClick(item.season_number)}} key={i}>{item.name}</Button>)}
-                 </InputGroup>
-                </Row>
-               
-                {this.state.episodes.map((item,i) =>
-                <Row key={i} className="row">
-                    <Episode key={i} episode={item}></Episode>
-                </Row>
-                )}
-            </Container>
-        );
-    }
+        <Container className="season-container">
+            <Row className="season-row">
+            <InputGroup style={{justifyContent: "center"}}>
+            {props.seasons.map((item,i) =>
+                <Button className="mr-2 mb-2 season-button" onClick={() => {handleClick(item.season_number)}} key={i}>{item.name}</Button>)}
+                </InputGroup>
+            </Row>
+            
+            {episodes.map((item,i) =>
+            <Row key={i} className="row">
+                <Episode key={i} episode={item}></Episode>
+            </Row>
+            )}
+        </Container>
+    );
 }
+
 
 export default Seasons;

@@ -6,45 +6,34 @@ import Container from 'react-bootstrap/Container';
 
 
 
-class TvShowCard extends React.Component {
+const TvShowCard = props => {
 
-    constructor(props){
-        super();
-        this.state= {
-            details: ''
-        }
-        this.handleOnClick = this.handleOnClick.bind(this);
+
+    const handleOnClick = () =>{
+        props.handleTvShowID(props.id);
     }
 
+    return(
 
-    handleOnClick = () =>{
-        this.props.handleTvShowID(this.props.id);
-    }
+        <Container onClick={() => handleOnClick()} 
+            className="container2">
+            {props.url ? 
+            <Image className="image" src={"https://image.tmdb.org/t/p/original"+props.url} alt="image"></Image> :
+            <Image className="noimage" src={require('./static/nope.jpg')} alt="image"></Image> 
+            }
+            <Card>
+                <Card.Body>
+                    <Card.Title className="card-title-show">{props.title}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{props.firstDate}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">{props.country}</Card.Subtitle>
+                    <Card.Text>
+                        {props.overview.slice(0,200)}...
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </Container>
+    );
 
-
-    render(){ 
-
-        return(
-
-            <Container onClick={this.handleOnClick} 
-                className="container2">
-                {this.props.url ? 
-                <Image className="image" src={"https://image.tmdb.org/t/p/original"+this.props.url} alt="image"></Image> :
-                <Image className="noimage" src={require('./static/nope.jpg')} alt="image"></Image> 
-                }
-                <Card>
-                    <Card.Body>
-                        <Card.Title className="card-title-show">{this.props.title}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{this.props.firstDate}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{this.props.country}</Card.Subtitle>
-                        <Card.Text>
-                            {this.props.overview.slice(0,200)}...
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Container>
-        );
-    }
 }
 
 export default TvShowCard;
